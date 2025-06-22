@@ -10,8 +10,8 @@ const SECRET_KEY = 'your_secret_key';
 
 mongoose.set('strictQuery', false);
 
-const uri = "mongodb://root:B7zyyso5CSH6PGp3LwXQAJQv@172.21.214.195:27017";
-mongoose.connect(uri, { 'dbName': 'SocialDB' });
+const uri =  "mongodb://mongodb:27017";
+mongoose.connect(uri,{'dbName':'SocialDB'});
 
 const User = mongoose.model('User', { username: String, email: String, password: String });
 const Post = mongoose.model('Post', { userId: mongoose.Schema.Types.ObjectId, text: String });
